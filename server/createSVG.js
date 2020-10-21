@@ -208,9 +208,12 @@ async function toSVG(obj, writeable) {
       dim[1] +
       '">' +
       '<defs><style type="text/css"><![CDATA[' +
-      'text {font-family:"Arial"}' +
-      "path {fill:none;stroke-linecap:round;stroke-linejoin:round;}" +
-      "rect {fill:none}" +
+      'text {font-family:"Arial", "Helvetica", sans-serif; user-select:none; -moz-user-select:none;}' +
+      "path {stroke-linecap:round;stroke-linejoin:round;}" +
+      "path.nofill {fill:none}" +
+      "rect.nofill {fill:none}" +
+      "ellipse.nofill {fill:none}" +
+      "line.nofill {fill:none}" +
       "]]></style></defs>"
   );
   await Promise.all(

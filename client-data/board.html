@@ -21,6 +21,12 @@
 	<link rel="alternate" hreflang="{{.}}" href="{{../boardUriComponent}}?lang={{.}}" />
 	{{/languages}}
 	<script src="../polyfill.min.js"></script>
+	<script id="MathJax-configuration">
+	  window.MathJax = {
+	      loader: {load: ['[tex]/physics']},
+	      tex: {packages: {'[+]': ['physics']}}
+	  };
+	</script>
 	<script type="text/javascript" id="MathJax-script" async src="mathjax/es5/tex-svg-full.js"></script>
 </head>
 
